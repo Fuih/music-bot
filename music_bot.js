@@ -1,6 +1,7 @@
 const Discord = require('discord.js')
 const ytdl = require('ytdl-core')
 const emoji = require('./emoji.json')
+const prefix = process.env.PREFIX
 
 class MusicBot {
     constructor() {
@@ -104,10 +105,10 @@ class MusicBot {
             .setTitle('DJ Commands')
             .setDescription('Find all the commands available on this channel')
             .addFields(
-                {name: `${emoji.BTN_PLAY} !play`, value: 'Play the music'},
-                {name: `${emoji.BTN_STOP} !stop`, value: 'Stop the music'},
-                {name: `${emoji.CD} !url + URL`, value: 'Change song URL'},
-                {name: `${emoji.MUSICAL_SCORE} !song`, value: 'Get song info'},
+                {name: `${emoji.BTN_PLAY} ${prefix}play`, value: 'Play the music'},
+                {name: `${emoji.BTN_STOP} ${prefix}stop`, value: 'Stop the music'},
+                {name: `${emoji.CD} ${prefix}url + URL`, value: 'Change song URL'},
+                {name: `${emoji.MUSICAL_SCORE} ${prefix}song`, value: 'Get song info'},
             )
 
         message.channel.send(embed)
