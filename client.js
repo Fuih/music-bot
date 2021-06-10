@@ -42,7 +42,7 @@ client.on('message', async message => {
             }
             break
         
-        case `${prefix}!play`:
+        case `${prefix}play`:
             if (!bot.verifyPermission(message)) return
 
             if (bot.isOccupied(message)) return
@@ -54,11 +54,11 @@ client.on('message', async message => {
             bot.stop(message)
             break
 
-        case `${prefix}!song`:
+        case `${prefix}song`:
             bot.getSongInfo(message)
             break
 
-        case '!help':
+        case `${prefix}help`:
             bot.help(message)
             break
     }
