@@ -35,14 +35,14 @@ client.on('message', async message => {
     }
 
     switch (cmd) {
-        case '!url':
+        case `${prefix}url`:
             success = await bot.changeUrl(message, args[0])
             if (message.member.voice.channel && success) {
                 bot.play(message)
             }
             break
         
-        case '!play':
+        case `${prefix}!play`:
             if (!bot.verifyPermission(message)) return
 
             if (bot.isOccupied(message)) return
@@ -50,11 +50,11 @@ client.on('message', async message => {
             bot.play(message)
             break
 
-        case '!stop':
+        case `${prefix}stop`:
             bot.stop(message)
             break
 
-        case '!song':
+        case `${prefix}!song`:
             bot.getSongInfo(message)
             break
 
