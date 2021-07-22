@@ -10,7 +10,7 @@
     "ffmpeg-static": "^4.3.0",
     "fluent-ffmpeg": "^2.1.2",
     "package-lock.json": "^1.0.0",
-    "ytdl-core": "^4.8.2"
+    "ytdl-core": "^4.9.0"
   },
   "devDependencies": {},
   "scripts": {
